@@ -1,0 +1,156 @@
+[
+    {
+        "pk": 1,
+        "model": "products.product",
+        "fields": {
+            "sku": "01",
+            "name": "Daiwa Black Widow Lure Fishing Rod",
+            "description": "The Daiwa BW lure fishing rod is the ideal rod for Pike and Perch or even lure fishing for Wrass and Bass on shore.",
+            "price": "51.99",
+            "category": "1",
+            "rating": "4.9",
+            "image_url": "",
+            "image": "daiwa-bw.webp"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.product",
+        "fields": {
+            "sku": "02",
+            "name": "Abu Garcia Beast X Pike Spinning Rod",
+            "description": "The Abu Garcia Beast rod has been specifically designed for fishing medium to large pike with heavy lures!",
+            "price": "69.99",
+            "category": "1",
+            "rating": "4.5",
+            "image_url": "",
+            "image": "ag-beast.webp"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "products.product",
+        "fields": {
+            "sku": "03",
+            "name": "John Wilson Six Shooter Travel Spin Fishing Rod",
+            "description": "The John Wilson Six Shooter is perfect for life on the move whether camping, hiking, or as a reliable rod for the car, it's got you covered!",
+            "price": "44.99",
+            "category": "1",
+            "rating": "4.6",
+            "image_url": "",
+            "image": "jw-six.webp"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "products.product",
+        "fields": {
+            "sku": "04",
+            "name": "Abu Garcia Venerate V2-C Spinning Rod",
+            "description": "The Abu Garcia Venerate V2-C Spinning Rod range have been designed as the perfect all-round spinning rods for lure fishing for predatory fish.",
+            "price": "54.99",
+            "category": "1",
+            "rating": "4",
+            "image_url": "",
+            "image": "venerate-v2.webp"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "products.product",
+        "fields": {
+            "sku": "05",
+            "name": "Daiwa Ninja Spinning Reel",
+            "description": "The Daiwa Ninja spinning reel is the ideal choice for estuary fishing or river fishing!",
+            "price": "51.99",
+            "category": "2",
+            "rating": "4.4",
+            "image_url": "",
+            "image": "daiwa-reel.webp"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "products.product",
+        "fields": {
+            "sku": "06",
+            "name": "Abu Garcia Cardinal X Spinning Reel",
+            "description": "The Abu Garcia cardinal is a good affordable spinning reel suitable for all spinning needs.",
+            "price": "29.99",
+            "category": "2",
+            "rating": "4.1",
+            "image_url": "",
+            "image": "ag-reel.webp"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "products.product",
+        "fields": {
+            "sku": "07",
+            "name": "Okuma Solaris Reel",
+            "description": "The Okuma Solaris is a mid-range reel that packs a punch! Ideal for larger rivers or estuary fishing.",
+            "price": "40.99",
+            "category": "2",
+            "rating": "4.0",
+            "image_url": "",
+            "image": "okuma-reel.webp"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "products.product",
+        "fields": {
+            "sku": "08",
+            "name": "Shimano Ultegra FC Fishing Reel",
+            "description": "The Shimano Ultegra spinning reel is a high-end reel that is capable of pretty much any spinning scenario.",
+            "price": "144.99",
+            "category": "2",
+            "rating": "5",
+            "image_url": "",
+            "image": "shimano-reel.webp"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "products.product",
+        "fields": {
+            "sku": "09",
+            "name": "Fishing Bag",
+            "description": "The ideal fishing bag to store all your fishing equipment.",
+            "price": "39.99",
+            "category": "3",
+            "rating": "4.4",
+            "image_url": "",
+            "image": "fish-bag.webp"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "products.product",
+        "fields": {
+            "sku": "10",
+            "name": "Fishing Tent",
+            "description": "Ideal for wet & windy conditions.",
+            "price": "99.99",
+            "category": "3",
+            "rating": "4.7",
+            "image_url": "",
+            "image": "fish-tent.webp"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "products.product",
+        "fields": {
+            "sku": "11",
+            "name": "Reclining Fishing Chair",
+            "description": "Ideal for long days at the lakes or beaches",
+            "price": "57.99",
+            "category": "3",
+            "rating": "5",
+            "image_url": "",
+            "image": "fish-chair.webp"
+        }
+    }
+]
