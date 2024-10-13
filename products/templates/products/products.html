@@ -22,14 +22,13 @@
             <div class="col-12 text-right">
                 <form method="GET" action="{% url 'products' %}" class="form-inline float-right">
                     <label for="category">Filter:</label>
-                    <select name="category" id="category" class="form-control">
+                    <select name="category" id="category" class="form-control" onchange="this.form.submit()">
                         <option value="">All</option>
                         {% for category in categories %}
                             <option value="{{ category.name }}" 
                             {% if request.GET.category == category.name %}selected{% endif %}>{{ category.friendly_name }}</option>
                         {% endfor %}
                     </select>
-                    <button type="submit" class="btn btn-outline-dark">Filter</button>
                 </form>
             </div>
         </div>
