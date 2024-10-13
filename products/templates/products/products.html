@@ -18,6 +18,21 @@
                 <hr class="w-50 mb-1">
             </div>
         </div>
+        <div class="row mb-3">
+            <div class="col-12 text-right">
+                <form method="GET" action="{% url 'products' %}" class="form-inline float-right">
+                    <label for="category">Filter:</label>
+                    <select name="category" id="category" class="form-control">
+                        <option value="">All</option>
+                        {% for category in categories %}
+                            <option value="{{ category.name }}" 
+                            {% if request.GET.category == category.name %}selected{% endif %}>{{ category.friendly_name }}</option>
+                        {% endfor %}
+                    </select>
+                    <button type="submit" class="btn btn-outline-dark">Filter</button>
+                </form>
+            </div>
+        </div>
         <div class="row">
             <div class="product-container col-10 offset-1">
                 <div class="row mt-1 mb-2"></div>
