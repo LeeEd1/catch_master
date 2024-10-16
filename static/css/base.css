@@ -25,3 +25,9 @@ body {
     background: white;
     z-index: -1;
 }
+
+.btt-link,
+.remove-item,
+.update-link{
+    cursor: pointer;
+}
