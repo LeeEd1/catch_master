@@ -170,5 +170,24 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-12 col-lg-7 text-center">
+                {% if from_profile %}
+                    <a href="{% url 'profile' %}" class="btn btn-dark rounded-0">
+                        <span class="icon mr-2">
+                            <i class="fas fas-user"></i>
+                            <span>Back to Profile.</span>
+                        </span>
+                    </a>
+                {% else %}
+                    <a href="{% url 'home' %}" class="btn btn-dark rounded-0">
+                        <span class="icon mr-2">
+                            <i class="fas fas-home"></i>
+                            <span>Back to home.</span>
+                        </span>
+                    </a>
+                {% endif %}
+            </div>
+        </div>
     </div>
 {% endblock %}
