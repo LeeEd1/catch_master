@@ -41,9 +41,9 @@ for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
   {% if redirect_field_value %}
   <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
   {% endif %}
-  <a href="{% url 'home' %}" class="btn btn-primary btn-outline-dark float-right rounded-0">
+  <a href="{% url 'home' %}" class="btn btn btn-outline-dark float-right rounded-0">
     <span class="icon">
-      <i class="fa-solid fa-house">Home</i>
+      <i class="fa fa-home">Home</i>
     </span>
   </a>
   <button class="primaryAction" type="submit">{% trans "Sign In" %}</button>
