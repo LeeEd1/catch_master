@@ -85,6 +85,12 @@
                                     </div>
                                 </div>
                             </div>
+                            {% if request.user.is_superuser %}
+                                <small>
+                                    <a href="{% url 'edit_product' product.id %}" class="text-dark">Edit</a> |
+                                    <a href="{% url 'delete_product' product.id %}" class="text-danger">Delete</a>
+                                </small>
+                            {% endif %}
                             <div class="col-12">
                                 <a href="{% url 'products' %}" class="btn rounded-0 mt-5">
                                     <span class="icon">
