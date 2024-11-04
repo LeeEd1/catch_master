@@ -2,3 +2,9 @@
     max-height: 416px;
     overflow-y: scroll;
 }
+
+
+.stripe-style-input {
+    border-color: #000;
+    border-radius: 5px;
+}
