@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-65=^9k2yt(q^976d)y&4lpj8l8iwt5gi!ny3ps$v58+t=8642y
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['catch-master.herokuapp.com', '8000-leeed1-catchmaster-qgn8mxhu3h4.ws.codeinstitute-ide.net']
+ALLOWED_HOSTS = ['catch-master-7d5d93ad4a60.herokuapp.com', '8000-leeed1-catchmaster-qgn8mxhu3h4.ws.codeinstitute-ide.net']
 
 
 # Application definition
