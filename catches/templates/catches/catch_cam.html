@@ -28,6 +28,9 @@
                                         <p class="card-text">
                                             <small class="text-muted">Uploaded by {{ entry.user.username }}</small>
                                         </p>
+                                        {% if entry.user == request.user %}
+                                            <a href="{% url 'edit_catch' entry.id %}" class="btn btn-sm btn-outline-primary mt-2">Edit</a>
+                                        {% endif %}
                                     </div>
                                 </div>
                             </div>
