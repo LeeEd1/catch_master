@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6">
+                <hr>
+                <h2 class="mb-4 text-center">Catch Management</h2>
+                <p class="text-muted">Edit Catch</p>
+                <hr>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6">
+                <form method="POST" action="{% url 'edit_catch' catch.id %}" class="form mb-2" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {% for field in form %}
+                        {% if field.name != 'image' %}
+                            {{ field|as_crispy_field }}
+                        {% else %}
+                            {{ field }}
+                        {% endif %}
+                    {% endfor %}
+                    <div class="text-right">
+                        <a class="btn btn-outline-dark rounded-0" href="{% url 'catch_cam' %}" aria-label="Cancel">Cancel</a>
+                        <button class="btn btn-dark rounded-0" type="submit" aria-label="Save changes">Update Catch</button>
+                    </div>
+                </form>
+            </div>            
+        </div>
+    </div>
+{% endblock %}

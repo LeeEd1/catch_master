@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
+from django.contrib import messages
 from .models import CatchEntry
 from .forms import CatchEntryForm
 from django.contrib.auth.decorators import login_required
@@ -30,6 +31,36 @@ def add_catch(request):
     template = 'catches/add_catch.html'
     context = {
         'form': form,
+    }
+
+    return render(request, template, context)
+
+@login_required
+def edit_catch(request, catch_id):
+    """
+    Edit an existing CatchEntry
+    """
+    catch_entry = get_object_or_404(CatchEntry, id=catch_id)
+
+    if catch_entry.user != request.user:
+        messages.error(request, "You are not authorized to edit this catch.")
+        return redirect('catch_cam')
+
+    if request.method == 'POST':
+        form = CatchEntryForm(request.POST, request.FILES, instance=catch_entry)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Catch successfully updated!')
+            return redirect('catch_cam')
+        else:
+            messages.error(request, 'Failed to update catch! Please ensure the form is valid.')
+    else:
+        form = CatchEntryForm(instance=catch_entry)
+    
+    template = 'catches/edit_catch.html'
+    context = {
+        'form': form,
+        'catch': catch_entry
     }
 
     return render(request, template, context)
