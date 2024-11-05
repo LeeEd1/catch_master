@@ -64,3 +64,18 @@ def edit_catch(request, catch_id):
     }
 
     return render(request, template, context)
+
+@login_required
+def delete_catch(request, catch_id):
+    """
+    Deletes an existing CatchEntry
+    """
+    catch_entry = get_object_or_404(CatchEntry, id=catch_id)
+
+    if catch_entry.user != request.user:
+        messages.error(request, "Sorry, only the owner can do this.")
+        return redirect('catch_cam')
+
+    catch_entry.delete()
+    messages.success(request, 'Catch successfully deleted!')
+    return redirect('catch_cam')
