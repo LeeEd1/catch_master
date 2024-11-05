@@ -1,12 +1,15 @@
 from django.shortcuts import render, redirect
 from .models import CatchEntry
 from .forms import CatchEntryForm
+from django.contrib.auth.decorators import login_required
 
 # Display all catch entries
+@login_required
 def catch_cam(request):
     entries = CatchEntry.objects.all()
     return render(request, 'catches/catch_cam.html', {'entries': entries})
 
+@login_required
 def add_catch(request):
     if request.method == 'POST':
         form = CatchEntryForm(request.POST, request.FILES)
