@@ -11,7 +11,31 @@
                 <div class="text-center my-4">
                     <a href="{% url 'add_catch' %}" class="btn btn-dark rounded-0" aria-label="Add catch">Add Catch</a>
                 </div>
-                <p>No catches yet!</p>
+
+                {% if entries %}
+                    <div class="row">
+                        {% for entry in entries %}
+                            <div class="col-md-4 my-3">
+                                <div class="card">
+                                    {% if entry.image %}
+                                        <img src="{{ entry.image.url }}" class="card-img-top" alt="{{ entry.name }}">
+                                    {% elif entry.image_url %}
+                                        <img src="{{ entry.image_url }}" class="card-img-top" alt="{{ entry.name }}">
+                                    {% endif %}
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{ entry.name }}</h5>
+                                        <p class="card-text">{{ entry.description }}</p>
+                                        <p class="card-text">
+                                            <small class="text-muted">Uploaded by {{ entry.user.username }}</small>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    <p>No catches yet!</p>
+                {% endif %}
             </div>
         </div>
     </div>
