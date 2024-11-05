@@ -21,10 +21,10 @@
                 <hr>
                 <h2 class="text-center">Thank You</h2>
                 <hr>
-                <p>Here is your order information, a confirmation email will be sent to <strong>{{ order.email }}</strong>.</p>
+                <p class="text-center">Here is your order information, a confirmation email will be sent to <strong>{{ order.email }}</strong>.</p>
             </div>
         </div>
-        <div class="row">
+        <div class="row justify-content-center">
             <div class="col-12 col-lg-7">
                 <div class="order-confirmation-wrapper p-2 border">
                     <div class="row">
@@ -170,20 +170,20 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row justify-content-center">
             <div class="col-12 col-lg-7 text-center">
                 {% if from_profile %}
                     <a href="{% url 'profile' %}" class="btn btn-dark rounded-0">
                         <span class="icon mr-2">
                             <i class="fas fas-user"></i>
-                            <span>Back to Profile.</span>
+                            <span>Back to Profile</span>
                         </span>
                     </a>
                 {% else %}
                     <a href="{% url 'home' %}" class="btn btn-dark rounded-0">
                         <span class="icon mr-2">
                             <i class="fas fas-home"></i>
-                            <span>Back to home.</span>
+                            <span>Back to home</span>
                         </span>
                     </a>
                 {% endif %}
