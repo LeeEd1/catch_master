@@ -1,131 +1,143 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Catch Master
+Catch Master is a family-run business specialising in a wide range of fishing equipment. The website enables customers to browse and purchase products with an integrated payment system. Registered users can manage their profile information and view past orders. The site also features a showcase section, where users can display and celebrate their fishing successes by sharing photos of past catches.
 
-Welcome Lee Edwards,
+## About
+![Am I Responsive](/media/readme/amiresponsive.PNG)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## UX:
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 18, 2024**
+### Site purose
 
-## Gitpod Reminders
+At Catch Master, we aim to provide anglers of all experience levels with the fishing gear they need, whether it’s for a quick trip or a serious fishing expedition.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+### Site goal
 
-`python3 -m http.server`
+The goal of Catch Master is to be the go to online destination for anglers by providing high quality, affordable fishing gear and gain registered users along the way. We aim to make the shopping experience simple and enjoyable with a showcase section to hopefully entice anonymous users to register.
 
-A blue button should appear to click: _Make Public_,
+### Audience
 
-Another blue button should appear to click: _Open Browser_.
+The site is aimed at anyone with an interest in fishing, regardless of age or experience level. We especially encourage younger users, as we believe fishing is a fantastic outdoor hobby to help kids get active and engaged with nature. However, parental assistance is required for any purchases made on the website.
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
+### Communication
 
-A blue button should appear to click: _Make Public_,
+The communication of the page is designed to be easily understood by any user. It features clear buttons, a user friendly modal pop up and employs easy to read fonts with distinctly displayed colours, aiming for universal accessability.
 
-Another blue button should appear to click: _Open Browser_.
+### New user goals
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+- Be able to easily navigate the site.
+- Browse all products.
+- be able to purchase without registering.
+- Be able to register if interested.
 
-To log into the Heroku toolbelt CLI:
+### Registered user goals
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+- 
+- Be able to sign in and sign out.
+- Ability to save/update profile information.
+- Be able to add/edit/delete a catch.
+- Ability to review past purchases.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
 
-### Connecting your Mongo database
 
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
+### Future user goals
 
-------
+- To be able to comment on other catches on the site.
+- To be able to add things to a wishlist
+- To be able to 
+- To earn badges or rewards for engagement, such as adding catches or leaving reviews.
 
-## Release History
+### Super user
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+- As a super user I want to be able to edit or remove catches.
+- Add/edit/delete products to the store.
 
-**June 18, 2024,** Add Mongo back into template
+## Design:
 
-**June 14, 2024,** Temporarily remove Mongo until the key issue is resolved
+### Wireframes
 
-**May 28 2024:** Fix Mongo and Links installs
+Please refer to [WIREFRAMES.md](WIREFRAMES.md)
 
-**April 26 2024:** Update node version to 16
+### Typography
 
-**September 20 2023:** Update Python version to 3.9.17.
+Due to my time constraints and how difficult I found this project I stuck with default fonts.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+### Color scheme
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+My color scheme was onyx, white and red(buttons) as shown below:
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+![Coolors](/static/images/readme-img/colors.png)
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+I chose to fully utilize bootstrap colours.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+### Images
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+I do not hold any rights to the images that are uploaded by url, rights for images by file will be down to the uploader.
+This page is for educational purposes only!
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+### Responsiveness
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+While creating my page I fully utilized [Bootstrap](https://getbootstrap.com/docs/4.4/getting-started/introduction/) for my responsive design.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+## Features
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+![Landing page](/media/readme/landing.png)
+Above is the landing page new users will see, It features a navbar with associated links and also my account link where they can register if they want. It also features a welcome box where they can click straight to products.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+![User landing](/media/readme/userland.PNG)
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+The landing page for registered users is the same bar the extra links in My Account drop down as shown. Site admin is only accessible by Superuser.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+![Product page](/media/readme/products2.PNG)
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+Above is the products page which unregistered and registered users will see, It features a list of the products and a filter option to filter by category.
 
-------
+![Product super](/media/readme/products1.PNG)
 
-## FAQ about the uptime script
+Above is the page a super user will see with edit and delete buttons.
 
-**Why have you added this script?**
+![Product detail](/media/readme/detail.PNG)
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+above is the product details page to select quantity size(if applicable). The edit and delete buttons are only visible by superuser.
 
-**How will this affect me?**
+![Profile](/media/readme/profile.PNG)
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+Above is the profile page that logged in users will see.
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+![Catch cam](/media/readme/catchcam.PNG)
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+Above is the catch cam page for registered users only, the edit and delete buttons are configured to only be deleted by the owner or the super user.
 
-**So….?**
+![Add Product](/media/readme/add-product.PNG)
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+Above is the add product page with form, this is only accessible by Superuser.
 
-**Can I opt out?**
+![Edit Product](/media/readme/edit-product.PNG)
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+Above is the edit product form which is only accessible by superuser. This form pre fills with the data that is existing.
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+![Delete Product](/media/readme/delete.PNG)
 
-**Anything more?**
+Above is the delete modal when delete is clicked. This is only accesible by super user.
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+### Messages
 
----
+![Messages](/media/readme/messages.PNG)
 
-Happy coding!
+The page features built in messages as shown above in the example. These are error, success and info and they change depending on the action.
+
+### Database design
+
+![DataBase](/media/readme/db.PNG)
+
+Above is my database design which I created using lucid chart, I am using posgresSQL which is a relational database.
+
+## Testing:
+
+Please refer to [TESTING.md](TESTING.md)
+
+### Bugs
+
+During the creation of Catch Master I was continuously using dev tools throughout to check for design issues/bugs where I corrected along the way. To my knowledge there are no known bugs to date.
+
+
+
