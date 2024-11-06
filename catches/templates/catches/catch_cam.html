@@ -28,7 +28,7 @@
                                         <p class="card-text">
                                             <small class="text-muted">Uploaded by {{ entry.user.username }}</small>
                                         </p>
-                                        {% if entry.user == request.user %}
+                                        {% if entry.user == request.user or request.user.is_superuser %}
                                             <a href="{% url 'edit_catch' entry.id %}" class="btn btn-sm rounded-0 btn-dark mt-2">Edit</a>
                                             <a href="{% url 'delete_catch' entry.id %}" class="btn btn-sm rounded-0 btn-danger mt-2">Delete</a>
                                         {% endif %}

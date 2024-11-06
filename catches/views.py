@@ -42,8 +42,8 @@ def edit_catch(request, catch_id):
     """
     catch_entry = get_object_or_404(CatchEntry, id=catch_id)
 
-    if catch_entry.user != request.user:
-        messages.error(request, "You are not authorized to edit this catch.")
+    if catch_entry.user != request.user and not request.user.is_superuser:
+        messages.error(request, "Sorry, only the owner and superuser can do this.")
         return redirect('catch_cam')
 
     if request.method == 'POST':
@@ -72,8 +72,8 @@ def delete_catch(request, catch_id):
     """
     catch_entry = get_object_or_404(CatchEntry, id=catch_id)
 
-    if catch_entry.user != request.user:
-        messages.error(request, "Sorry, only the owner can do this.")
+    if catch_entry.user != request.user and not request.user.is_superuser:
+        messages.error(request, "Sorry, only the owner and superuser can do this.")
         return redirect('catch_cam')
 
     catch_entry.delete()
