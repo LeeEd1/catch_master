@@ -124,3 +124,9 @@ body {
     background-color: red;
     border-color: red;
 }
+
+@media (max-width: 375px) {
+    .welcome-content {
+        margin-top: 70px;
+    }
+}
