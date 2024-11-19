@@ -21,6 +21,8 @@
                                         <img src="{{ entry.image.url }}" class="card-img-top" alt="{{ entry.name }}">
                                     {% elif entry.image_url %}
                                         <img src="{{ entry.image_url }}" class="card-img-top" alt="{{ entry.name }}">
+                                    {% else %}
+                                        <img src="{{ MEDIA_URL }}noimage.png" class="card-img-top" alt="No Image Available">
                                     {% endif %}
                                     <div class="card-body">
                                         <h5 class="card-title">{{ entry.name }}</h5>
