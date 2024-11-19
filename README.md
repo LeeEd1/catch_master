@@ -139,5 +139,138 @@ Please refer to [TESTING.md](TESTING.md)
 
 During the creation of Catch Master I was continuously using dev tools throughout to check for design issues/bugs where I corrected along the way. To my knowledge there are no known bugs to date.
 
+## Technologies used
+
+- GitHub - Used for my repository
+- Gitpod - Used for my editor
+- Heroku - Used to deploy the app
+- postgreSQL - For my database
+- AWS - For my static and media files.
+- Stripe - For payment
+
+### Languages used
+
+- HTML
+- CSS and Bootstrap library
+- Javascript and Jquery library
+- Python
+
+## Deployment
+
+My site was deployed to [heroku](https://www.heroku.com/) View the live site here [Here](https://catch-master-7d5d93ad4a60.herokuapp.com/)
+
+### Repository
+
+My repository is stored [Here](https://github.com/LeeEd1/catch_master).
+
+#### Cloning
+
+To clone a repository you will need to follow the steps below.
+
+1. Locate the repository you wish to clone. [Here](https://github.com/LeeEd1/catch_master) is my repo for example.
+2. Click the <>code button to the left of open.
+3. Choose which you prefer HTTPS, SSH or GitHub CLI then click Copy to clipboard.
+4. Open terminal or shell and change the current working directory to the one where you want the cloned repo.
+5. In your terminal you will need to type the following command to clone the repo.
+    `
+    git clone https://github.com/LeeEd1/catch_master.git
+    `
+6. Press enter to create your local clone.
+
+#### Forking
+
+To fork a repository you will need to follow the steps below.
+
+1. Locate the repository you wish to fork. [Here](https://github.com/LeeEd1/catch_master) is my repo for example.
+2. Click the fork button located towards the top of the page inbetween unwatch and star.
+3. Once you have clicked this you should have a copy in your Github account.
+
+## Live deployment
+
+### Database
+
+1. To create my database I navigated to [postgreSQL](https://dbs.ci-dbs.net/) from code institute.
+2. Enter your email and click submit.
+3. Add the config var DATABASE_URL and your database url from postgreSQL as the value.
+4. Go to the database section in your settings.py and comment out SQLite connection and add this below:
+    DATABASES = {
+    'default': dj_database_url.parse('your-database-url-here')
+} IMPORTANT! Do not commit this as your database will be visible on github.
+5. Run the following command to check your connected to external database:
+    `
+    python3 manage.py showmigrations
+    `
+6. If you are connected you should see a list of migrations and none of them will be checked.
+7. you can then run migrations by using the following command.
+    `
+    python3 manage.py migrate
+    `
+8. Then load in the fixtures making sure categories is first by running the following commands:
+    `
+    python3 manage.py loaddata categories
+    `
+    `
+    python3 manage.py loaddata products
+    `
+9. Create a Super user for your database by running the following command:
+    `
+    python3 manage.py createsuperuser
+    `
+
+10. To provent exposing our database url, Change the database setting back to SQLite database in settings.py.
 
 
+
+### Heroku 
+
+To deploy your app on heroku, you will need to follow the steps below.
+
+1. Log into heroku.
+2. Click the new button and select 'Create New App'.
+3. Choose a name for your app and set the region to the region closest to you.
+4. Choose a connection method, I used github as the deployment method.
+5. Search for your repository and click connect.
+6. Click the settings tab and reveal config vars.
+7. Update the necessary config variables for your project.
+8. Navigate back to deploy and select automatic deployment.
+
+### AWS
+
+1. Navigate to [AWS](https://aws.amazon.com/) and create a account on free tier.
+2. Search for s3 service in AWS console and click Create bucket.
+3. Choose a unique bucket name and select region. 
+4. Uncheck "Block all Public access".
+5. Navigate to the "properties tab" and activate "Static website hosting".
+6. Set index.html  as the index document and click save. 
+7. Navigate back to the Permissions tab, click edit on the CORS configuration and set the below configuration:
+    ```
+     [
+       {
+         "AllowedHeaders": ["Authorization"],
+         "AllowedMethods": ["GET"],
+         "AllowedOrigins": ["*"],
+         "ExposeHeaders": []
+       }
+     ]
+     ```
+8. Under the Permissions tab click "Bucket Policy," create a policy using the policy generator (choose "S3 Bucket Policy," set the principal to "*," enter your bucket's ARN, add the statement and generate the policy), copy generated JSON into the bucket policy editor and save the changes.
+9. Navigate to IAM to create a User Group, you will need to add a policy to user group and then create a user to go in the group. Once created download the csv file and copy these values into your live environment.
+10. In your settings.py file you will need to update your name and region to match your bucket.
+
+## Credits:
+
+### Content
+
+- [Color Hex](https://www.color-hex.com/color-palette/64222) For my color choices.
+- [Font Awesome](https://fontawesome.com/) For my icons.
+- [Google fonts](https://fonts.google.com/) For my fonts.
+
+### Media
+
+I do not hold any rights to any images displayed on this site as they are uploaded by photo URL, this site is purely educational purposes only.
+
+### People
+
+- I would like to thank my mentor [Spencer barriball](https://github.com/5pence) for his support throughout my fourth project and again pointing me in the right direction.
+- I would like to thank my friend [Nicholas Mobey](https://www.linkedin.com/in/nicolas-mobey-79149049) for his continuous support.
+- I would like to thank the [CI Tutor support](https://learn.codeinstitute.net/ci_support/level5diplomainwebappdevelopment/tutor) for their ongoing support throughout my projects.
