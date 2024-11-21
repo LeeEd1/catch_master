@@ -125,8 +125,8 @@ body {
     border-color: red;
 }
 
-@media (max-width: 375px) {
-    .welcome-content {
+@media (max-width: 400px) {
+    .container .welcome-content {
         margin-top: 100px;
     }
 }
