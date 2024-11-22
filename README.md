@@ -185,6 +185,44 @@ To fork a repository you will need to follow the steps below.
 2. Click the fork button located towards the top of the page inbetween unwatch and star.
 3. Once you have clicked this you should have a copy in your Github account.
 
+#### Requirements
+
+Once you have cloned/forked a repository you will need to install the dependancies in the requiremnts.txt file, you can do this by running the command below:
+'
+pip3 install -r requirements.txt
+'
+
+If any packages are installed after cloning or forking you will need to freeze the requirements.txt file by running the command below:
+'
+pip3 freeze > requirements.txt
+'
+
+#### Environment Variables
+
+You will need to hide your environment variables containing sensitive data such as secret keys or your database to stop these being pushed to github. I chose to put my variables directly in gitpod and heroku, the steps to do this are as follows.
+
+Gitpod:
+
+1. Click the profile icon in the top right corner of the Gitpod window and select User Settings.
+2. In the left hand panel click variables.
+3. Click New variable
+3. Enter variable name. eg. VARIABLE_NAME
+4. Enter Value.
+5. Enter scope. (* for all repositories or username/repo-name for a specific repository)
+6. Click add variable to save.
+
+Heroku:
+
+1. Navigate to your app in heroku and click settings.
+2. Scroll down to config vars and click reveal config vars.
+3. Enter your config vars eg. VARIABLE_NAME and value
+4. Click add to save the variable
+
+Note: 
+
+Once your app is live in heroku you can place all of your config vars here. Heroku will automatically make them available for your app so you dont need to hard code them or use the export command.
+
+
 ## Live deployment
 
 ### Database
