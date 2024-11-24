@@ -224,6 +224,17 @@ Note:
 
 Once your app is live in heroku you can place all of your config vars here. Heroku will automatically make them available for your app so you dont need to hard code them or use the export command.
 
+#### Git:
+
+Throughout my fourth project, I took extra care to ensure my commits were concise and detailed with the aim of assisting other developers who might work on a project after me. I utilised descriptive tags such as FIX, FEAT, CHORE and DOCS paired with short clear commit messages to ensure clarity and maintain a professional workflow.
+
+FEAT: Use this tag if the commit introduces a new feature or functionality to the project. These changes enhance the project by adding new capabilities or tools for users or developers.
+
+FIX: Use this tag if the commit addresses and resolves a bug or error in your code. These changes ensure the code behaves as intended by correcting specific issues or flaws.
+
+CHORE: Use this tag if you are cleaning up code or making adjustments that do not introduce a new feature or resolve a bug. These changes are typically focused on maintenance, organisation or improving the clarity and structure of the codebase.
+
+DOCS: Use this tag if you are creating or updating a project’s documentation such as README.md, TESTING.md or WIREFRAMES.md. These changes ensure the documentation is accurate, up-to-date and helpful for users and developers.
 
 ## Live deployment
 
