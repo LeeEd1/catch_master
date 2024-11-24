@@ -26,8 +26,10 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ['catch-master-7d5d93ad4a60.herokuapp.com', '8000-leeed1-catchmaster-qgn8mxhu3h4.ws.codeinstitute-ide.net']
-
+ALLOWED_HOSTS = [
+    'catch-master-7d5d93ad4a60.herokuapp.com',
+    '8000-leeed1-catchmaster-qgn8mxhu3h4.ws.codeinstitute-ide.net',
+]
 
 # Application definition
 
@@ -83,12 +85,12 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
-                'bag.contexts.bag_contents'
+                'bag.contexts.bag_contents',
             ],
             'builtins': [
                 'crispy_forms.templatetags.crispy_forms_tags',
                 'crispy_forms.templatetags.crispy_forms_field',
-            ]
+            ],
         },
     },
 ]
@@ -124,7 +126,8 @@ WSGI_APPLICATION = 'catch_master.wsgi.application'
 if 'DATABASE_URL' in os.environ:
     DATABASES = {
         'default': dj_database_url.parse(
-            os.environ.get('DATABASE_URL'))
+            os.environ.get('DATABASE_URL')
+        )
     }
 else:
     DATABASES = {
@@ -189,7 +192,9 @@ if 'USE_AWS' in os.environ:
     AWS_S3_REGION_NAME = 'eu-north-1'
     AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
     AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
-    AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.{AWS_S3_REGION_NAME}.amazonaws.com'
+    AWS_S3_CUSTOM_DOMAIN = (
+        f'{AWS_STORAGE_BUCKET_NAME}.s3.{AWS_S3_REGION_NAME}.amazonaws.com'
+    )
 
     # Static and Media Files
     STATICFILES_STORAGE = 'custom_storages.StaticStorage'
@@ -220,7 +225,7 @@ else:
     EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
     EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
     DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
-    
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
