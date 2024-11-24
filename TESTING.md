@@ -93,3 +93,21 @@ I used [CI python linter](https://pep8ci.herokuapp.com/) throughout my project t
 JS:
 
 After passing my js files through js hint I come accross one error which was a missing semi colon. The adjustment can be seen [here](https://github.com/LeeEd1/catch_master/commit/f0f97c8f1f1a941b7bee381e0b0d1a469727b4f0)
+
+
+### Lighthouse testing:
+
+Desktop Lighthouse report:
+
+![DESK-LIGHT](media/testing/desk-light2.PNG)
+
+The desktop lighthouse scores are pretty much the same throughout, I have used the lowest score as an example.
+
+Mobile Lighthouse reports:
+
+![MOB-LIGHT](media/testing/mob-light.PNG)
+
+Performance dips to between 60-70 on some other pages but I believe this is to do with rendering on mobile devices as these issues don't arise on desktop.
+
+
+Throughout creating my project I was continuously using dev tools and lighthouse to check for any issues. The issues I fixed are documented in my commits under CHORE. Most of the issues were labels and some meta tags. I also have some issues with best practices however I believe this is down to stripe and cookies which I am not too worried about. 
