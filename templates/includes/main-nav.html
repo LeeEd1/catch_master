@@ -6,7 +6,8 @@
     </div>
     <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
         <form method="GET" action="{% url 'products' %}" class="form-inline justify-content-center">
-            <input class="form-control w-50 mr-sm-2" type="search" name="q" placeholder="Search our site" aria-label="Search">
+            <input class="form-control w-50 mr-sm-2" type="search" name="q" placeholder="Search our site"
+                aria-label="Search">
             <button class="btn btn-outline-light my-2 my-sm-0" type="submit" aria-label="Search">
                 <i class="fas fa-search"></i>
             </button>
@@ -23,7 +24,8 @@
                 </a>
             </li>
             <li class="list-inline-item dropdown">
-                <a class="nav-link text-white" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link text-white" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
                     <div class="text-center">
                         <div><i class="fas fa-user fa-lg text-white"></i></div>
                         <p class="my-0 text-white">My Account</p>
@@ -45,7 +47,8 @@
             </li>
 
             <li class="list-inline-item">
-                <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-white{% endif %} nav-link" href="{% url 'view_bag' %}">
+                <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-white{% endif %} nav-link"
+                    href="{% url 'view_bag' %}">
                     <div class="text-center">
                         <div><i class="fas fa-shopping-bag fa-lg text-white"></i></div>
                         <p class="my-0 text-white">
