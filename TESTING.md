@@ -71,3 +71,25 @@
 |Select image BTN      |Left click  |Opens files for user to add image                       |Pass   |
 |Cancel BTN            |Left click  |Cancels entry                                           |Pass   |
 |Add Product BTN       |Left click  |Sumbits the form to add product                         |Pass   |
+
+### Validator testing:
+
+Html:
+
+![Html-validator](media/testing/html-validator.PNG)
+
+Whilst passing this through the validator I had 1 error which was duplicate ID on navbars, I dont think this would cause any issues but I made adjustments to clear the error just for clean results. The change I made can be seen [here](https://github.com/LeeEd1/catch_master/commit/2b44b33b39a3ff35c7fcd4a9ab5e3cec4e7abae9).
+
+I also had warnings showing with the attribute type="text/javascript", This also should cause any issues but I removed them just for clean results. The changes I made can be seen [here](https://github.com/LeeEd1/catch_master/commit/6f7f804007455f899c81732dc6f8a5069fcc4d03#diff-6140a05cf6f64320c906c5bf858179b0911493fb1bbe5f430844c8820f60cb2cL142)
+
+Css:
+
+![CSS-validator](media/testing/css-validator.PNG)
+
+Python:
+
+I used [CI python linter](https://pep8ci.herokuapp.com/) throughout my project to correct any pep8 compliancy issues, I had quite a few issues with white space, length of code and trailing whitespace. This is documented in my commits with the adjustments.
+
+JS:
+
+After passing my js files through js hint I come accross one error which was a missing semi colon. The adjustment can be seen [here](https://github.com/LeeEd1/catch_master/commit/f0f97c8f1f1a941b7bee381e0b0d1a469727b4f0)
