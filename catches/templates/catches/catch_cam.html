@@ -16,13 +16,13 @@
                     <div class="row">
                         {% for entry in entries %}
                             <div class="col-md-4 my-3">
-                                <div class="card">
+                                <div class="card catch-img">
                                     {% if entry.image %}
-                                        <img src="{{ entry.image.url }}" class="card-img-top" alt="{{ entry.name }}">
+                                        <img src="{{ entry.image.url }}" class="card-img-top img-fluid" alt="{{ entry.name }}">
                                     {% elif entry.image_url %}
-                                        <img src="{{ entry.image_url }}" class="card-img-top" alt="{{ entry.name }}">
+                                        <img src="{{ entry.image_url }}" class="card-img-top img-fluid" alt="{{ entry.name }}">
                                     {% else %}
-                                        <img src="{{ MEDIA_URL }}noimage.png" class="card-img-top" alt="No Image Available">
+                                        <img src="{{ MEDIA_URL }}noimage.png" class="card-img-top img-fluid" alt="No Image Available">
                                     {% endif %}
                                     <div class="card-body">
                                         <h5 class="card-title">{{ entry.name }}</h5>
