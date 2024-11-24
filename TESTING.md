@@ -65,3 +65,9 @@
 
 
 #### Site admin page:
+
+| Feature tested       | Action     | Expected Outcome                                       | Result|
+|----------------------|------------|--------------------------------------------------------|-------|
+|Select image BTN      |Left click  |Opens files for user to add image                       |Pass   |
+|Cancel BTN            |Left click  |Cancels entry                                           |Pass   |
+|Add Product BTN       |Left click  |Sumbits the form to add product                         |Pass   |
