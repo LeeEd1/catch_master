@@ -188,14 +188,16 @@ To fork a repository you will need to follow the steps below.
 #### Requirements
 
 Once you have cloned/forked a repository you will need to install the dependancies in the requiremnts.txt file, you can do this by running the command below:
-'
+
+`
 pip3 install -r requirements.txt
-'
+`
 
 If any packages are installed after cloning or forking you will need to freeze the requirements.txt file by running the command below:
-'
+
+`
 pip3 freeze > requirements.txt
-'
+`
 
 #### Environment Variables
 
