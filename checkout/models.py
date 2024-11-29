@@ -3,20 +3,10 @@ import uuid
 from django.db import models
 from django.db.models import Sum
 from django.conf import settings
-from django.core.exceptions import ValidationError
 from django_countries.fields import CountryField
 
 from products.models import Product
 from profiles.models import UserProfile
-
-
-def validate_no_numbers(value):
-    """
-    Custom validator to check if name fields contain numbers
-    """
-    for char in value:
-        if char.isdigit():
-            raise ValidationError("Sorry, This field can't contain numbers.")
 
 
 class Order (models.Model):
@@ -24,8 +14,7 @@ class Order (models.Model):
     user_profile = models.ForeignKey(
         UserProfile, on_delete=models.SET_NULL,
         null=True, blank=True, related_name='orders')
-    first_name = models.CharField(max_length=25, null=False, blank=False,
-        validators=[validate_no_numbers])
+    first_name = models.CharField(max_length=25, null=False, blank=False)
     last_name = models.CharField(max_length=25, null=False, blank=False)
     email = models.EmailField(max_length=254, null=False, blank=False)
     phone_number = models.CharField(max_length=20, null=False, blank=False)
