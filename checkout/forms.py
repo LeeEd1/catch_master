@@ -38,13 +38,3 @@ class OrderForm(forms.ModelForm):
                 self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].widget.attrs['class'] = 'stripe-style-input'
             self.fields[field].label = False
-
-    def clean_first_name(self):
-        """
-        Checks if name field contains numbers.
-        """
-        first_name = self.cleaned_data.get('first_name')
-        for char in first_name:
-            if char.isdigit():
-                raise ValidationError("Sorry, first name can't contain numbers.")
-        return first_name
