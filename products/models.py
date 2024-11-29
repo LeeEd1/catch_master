@@ -25,7 +25,7 @@ class Product(models.Model):
     description = models.TextField()
     has_sizes = models.BooleanField(default=False, null=True, blank=True)
     price = models.DecimalField(
-        max_digits=6, decimal_places=2, validators=[MinValueValidator(0.01)])
+        max_digits=6, decimal_places=2, validators=[MinValueValidator(Decimal('0.01'))])
     rating = models.DecimalField(
         max_digits=6, decimal_places=2,
         null=True, blank=True, validators=[MinValueValidator(0.01)])
