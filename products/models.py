@@ -29,7 +29,7 @@ class Product(models.Model):
         max_digits=6, decimal_places=2, validators=[MinValueValidator(Decimal('0.01'))])
     rating = models.DecimalField(
         max_digits=6, decimal_places=2,
-        null=True, blank=True, validators=[MinValueValidator(0.01)])
+        null=True, blank=True, validators=[MinValueValidator(Decimal('0.01'))])
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
 
