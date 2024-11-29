@@ -52,6 +52,9 @@ def checkout(request):
             'phone_number': request.POST['phone_number'],
         }
         order_form = OrderForm(form_data)
+
+        order_form.full_clean()
+
         if order_form.is_valid():
             order = order_form.save(commit=False)
             pid = request.POST.get('client_secret').split('_secret')[0]
