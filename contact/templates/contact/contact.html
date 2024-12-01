@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6">
+                <hr>
+                <h2 class="mb-4 text-center">Contact Us</h2>
+                <p class="text-muted">We would love to hear from you! Please fill out the form below.</p>
+                <hr>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6">
+                <form method="POST" action="{% url 'contact' %}" class="form mb-2">
+                    {% csrf_token %}
+                    {% for field in form %}
+                        {{ field|as_crispy_field }}
+                    {% endfor %}
+                    <div class="text-right">
+                        <a class="btn btn-outline-dark rounded-0" href="{% url 'home' %}" aria-label="Cancel">Cancel</a>
+                        <button class="btn btn-dark rounded-0" type="submit" aria-label="Send Message">Send Message</button>
+                    </div>
+                </form>
+            </div>            
+        </div>
+    </div>
+{% endblock %}
