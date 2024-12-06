@@ -15,3 +15,7 @@ def contact(request):
         form = ContactForm()
 
     return render(request, 'contact/contact.html', {'form': form})
+
+
+def thank_you(request):
+    return render(request, 'contact/thankyou.html')
