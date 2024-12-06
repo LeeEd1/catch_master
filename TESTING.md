@@ -2,6 +2,8 @@
 
 ## Manual Testing
 
+During the development of my project I was continuously testing my code as I progressed. Whenever I identified an issue, I corrected it immediately and documented the fix in my commit history using the FIX: label. This approach ensured a robust and reliable codebase while providing a clear record of the changes made.
+
 ### User Actions
 
 #### Homepage:
