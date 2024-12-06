@@ -127,9 +127,9 @@ The page features built in messages as shown above in the example. These are err
 
 ### Database design
 
-![DataBase](/media/readme/db.PNG)
+![DataBase](/media/readme/new-lucid.PNG)
 
-Above is my database design which I created using lucid chart, I am using posgresSQL which is a relational database.
+Above is my database design which I created using lucid chart, I am using posgresSQL which is a relational database. The contact model is not directly related to any other model.
 
 ## Testing:
 
